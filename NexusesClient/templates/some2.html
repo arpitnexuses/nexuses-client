@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="main-container">
+    {% with dash_app = dash_app._generate_scripts_html() %}
+        {{ dash_app|safe }}
+    {% endwith %}
+</div>
+<!-- Required Dash scripts -->
+<script src="{{ url_for('static', filename='dash.js') }}"></script>
+<script src="{{ url_for('static', filename='dash-components.js') }}"></script>
+<script src="{{ url_for('static', filename='dash-renderer.js') }}"></script>
+
+<!-- Initialize the Dash app -->
+<script>
+    var dashApp = new Dash({
+        'urlBasePathname': '/dash/'
+    });
+</script>
+</body>
+</html>

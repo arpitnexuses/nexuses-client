@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    <title>Responsive Dashboard</title>
+    <!-- <style>
+    /* Style for the sidebar */
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f1f1f1;
+      overflow-x: hidden;
+      padding-top: 16px;
+    }
+
+    /* Style for the main content */
+    .main-content {
+      margin-left: 250px;
+      padding: 16px;
+    }
+
+    /* Style for the toggle button */
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+    }
+
+    /* Style for the demo links */
+    .demo-links {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Style for the demo links */
+    .demo-links a {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+  </style> -->
+    <style>
+        /* .logo{
+      margin-bottom: 20px;
+    } */
+        main {
+            overflow-x: scroll;
+            height: 630px;
+        }
+
+        /* .w-64 {
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 16px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="flex h-screen">
+        <div class="fixed w-64 bg-blue-600 h-full hidden md:block">
+            <div class="p-6">
+                <img src="https://nexuses.s3.us-east-2.amazonaws.com/Nexuses+logo+WHITE+(1).png" alt="Logo"
+                    style="margin-bottom: 20px;">
+                <nav><a class="text-white-400 text-xl hover:text-blue block py-2 px-3"
+                        href="{{ url_for('dashboard') }}">Dashboard</a>
+                    <a class="text-white-400 text-xl hover:text-blue block py-2 px-3"
+                        href="{{ url_for('pipeline') }}">Pipeline</a>
+
+                    <a class="text-white-400 text-xl hover:text-blue block py-2 px-3"
+                        href="{{ url_for('logout') }}">Logout</a>
+
+                </nav>
+            </div>
+        </div>
+        <div class="flex-1 bg-gray-100">
+            <header class="bg-transparent ml-64 p-6 flex justify-content">
+                <h1 class="text-3xl font-medium "
+                    style="margin-top: 20px; font-family:'Courier New', Courier, monospace; font-weight: 300;">Dashboard
+                </h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/RSMStandardLogoRGB.png" alt="Logo"
+                    style=" width: 140px; margin-left: auto; margin-bottom: -20px;">
+            </header>
+            <main class="p-6 ml-64">
+
+                <div class="flex flex-row">
+                    <div id="chart1" class="w-1/2">
+                        {{ fig|safe }}
+                    </div>
+                    <div id="chart2" class="w-1/2">
+                        {{ fig_pie|safe }}
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div id="chart3" class="w-1/2">
+                        {{ fig_email|safe }}
+                    </div>
+                    <div id="chart4" class="w-1/2">
+                        {{ fig_email_pie|safe }}
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <title>Dashboard</title>
+  
+  <style>
+    #myiframe {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 50px !important;
+    }
+
+    #myiframe iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="flex">
+    <div class="fixed w-64 bg-blue-500 h-full hidden md:block overflow-y">
+      <div class="p-6">
+        <img src="https://nexuses.s3.us-east-2.amazonaws.com/Nexuses+logo+WHITE+(1).png" alt="Logo" style="margin-bottom: 20px;">
+        <nav>
+          
+          <a class="text-white text-xl hover:text-blue-600 block py-2 px-3"
+            href="{{ url_for('pipeline') }}">Pipeline</a>
+
+          <a class="text-white text-xl hover:text-blue-600 block py-2 px-3" href="{{ url_for('logout') }}">Logout</a>
+
+        </nav>
+      </div>
+    </div>
+    <div class="flex-1 bg-gray-100">
+      <header class="bg-transparent ml-64 p-6 flex justify-content">
+        <h1 class="text-3xl font-medium"
+          style="margin-top: 20px; font-family:'Courier New', Courier, monospace; font-weight: 300;">Pipeline</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/RSMStandardLogoRGB.png" alt="Logo"
+          style=" width: 140px; margin-left: auto; margin-bottom: -20px;">
+      </header>
+      <main class="ml-64 p-6 bg-transparent">
+        <div id="myiframe" class="bg-transparent">
+          <iframe class="clickup-embed" src="{{ url_for('iframe_content') }}" onwheel="" width="100%" height="730px"  style="background: transparent; overflow-x: hidden; border:none;"></iframe>
+        </div>
+      </main>
+    </div>  
+  </div>
+
+</body>
+
+</html>

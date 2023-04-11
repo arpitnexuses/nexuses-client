@@ -1,0 +1,277 @@
+Delivered-To: arpit.m@nexuses.in
+Received: by 2002:a59:ca61:0:b0:3b7:6ffb:91 with SMTP id w1csp2146038vqt;
+        Sun, 2 Apr 2023 23:49:43 -0700 (PDT)
+X-Google-Smtp-Source: AKy350aSqN9g61zdQqbJEl1pZlp+p9Jxot+ufCpD1Xzri8lHergSw6m9AV8D+Pf/6EsezI1hS0Ox
+X-Received: by 2002:adf:e3c6:0:b0:2ce:9f0d:df51 with SMTP id k6-20020adfe3c6000000b002ce9f0ddf51mr25261092wrm.69.1680504583309;
+        Sun, 02 Apr 2023 23:49:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1680504583; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YGioK6ejuU1dSDk2aPhyO5XoYcC0bgct1KVqXJsSzVhAXG/sV25O51+G3AqfIU0r3Z
+         lG01a7PN5qJmwEqsghLDzRmOpa7G+CKp7YFd4dIA0izCDS7RVdeX7BWeq5BuV6O+GyzP
+         j1qRhng4npjyFZB5YfaqF+U9uX8Ty8bhiLlrd5rA/fJ2eJn2fpaf02RgHrSRzwzmIIUP
+         uaShgBXzhoP+qUQPrAzYBYN40h7MTE2h72RCYJjjLWDZCuD0MrWaGKdnojgB1zrL7WkT
+         HSHVT8fTqqTSlrM09u3dQ8iRyVAS29hoto0N6L1rEiKSHGS63IlZlFBtXbo27EpGut2d
+         X3qw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:feedback-id:list-unsubscribe:list-unsubscribe-post
+         :date:subject:to:from:sendername:senderemail:message-id
+         :dkim-signature;
+        bh=pMne93GrGX9ACd392/fIJOT5YEcNS/5q7fmQcpPw7Jg=;
+        b=0l0l5SnwqnkSlaUSHjm4mPW7nFgcFonJBQJgBJnmROogs76kliKlS5Ia9wiCzNXV8Q
+         6IIi4RbTskVHUTGrtYQfKxMKbOYDsfG5rybHU5HUgP1bBrCDBzt1SpfPtsdsL0kqTzpr
+         O//H/Qf4Aise6iRiPqhKMKOhJANAmCRYg+WO0oh7dCTQ4unsw3pWwcZxh8lirJNPWHt7
+         crtJHp/jExzFYxDKhaTjr0i7dIg5YIEdy56zPeBZrjiZD947MKYKB+Q+yQruFDPdYaaR
+         ecnnexAUJU4jltniRdb+lx1cR0g6l3HyTxbktITPrOX0QJq4Zm0lYase4OEhyoHcFAlm
+         RDoQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@americandentaltraining.com header.s=mailjet header.b=Ka+A+0cf;
+       spf=pass (google.com: domain of 82e4b911.baaaa_poxrkaaaaaaaaaald53v0aaycsdf0aaaaaab-0bwbkkncg@bnc3.epriscon.com designates 185.250.236.8 as permitted sender) smtp.mailfrom=82e4b911.BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncG@bnc3.epriscon.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=americandentaltraining.com
+Return-Path: <82e4b911.BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncG@bnc3.epriscon.com>
+Received: from o8.p37.mailjet.com (o8.p37.mailjet.com. [185.250.236.8])
+        by mx.google.com with UTF8SMTPS id f2-20020a0560001b0200b002d260dfd2f3si4813793wrz.629.2023.04.02.23.49.43
+        for <arpit.m@nexuses.in>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 02 Apr 2023 23:49:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 82e4b911.baaaa_poxrkaaaaaaaaaald53v0aaycsdf0aaaaaab-0bwbkkncg@bnc3.epriscon.com designates 185.250.236.8 as permitted sender) client-ip=185.250.236.8;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@americandentaltraining.com header.s=mailjet header.b=Ka+A+0cf;
+       spf=pass (google.com: domain of 82e4b911.baaaa_poxrkaaaaaaaaaald53v0aaycsdf0aaaaaab-0bwbkkncg@bnc3.epriscon.com designates 185.250.236.8 as permitted sender) smtp.mailfrom=82e4b911.BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncG@bnc3.epriscon.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=americandentaltraining.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=americandentaltraining.com; i=judy.a@americandentaltraining.com; s=mailjet; x=1680591982;
+  h=message-id:senderemail:sendername:from:from:to:to:subject:subject:date:date:list-unsubscribe-post:
+  list-unsubscribe:feedback-id:x-csa-complaints:x-mj-mid:x-report-abuse-to:
+  mime-version:content-type;
+  bh=UORP2ScESdkA1IKTh0oqlaMDKcsIO7QK713/v3qPJUQ=;
+  b=Ka+A+0cfuAPtcr/oHmLngJRW33wbdZ8hbQhZIDUit1ApIK1lk1RdYZPW/
+ 9ScoZ8ajquA6xFs+ok+71MqOOoh2Gw5yQqYTkR4IUwsOOuq7HBTtRiASGom2
+ 55nDgGCIeU/KIRxNXPOYpSmZc2C9+T+/Ky02TCSf/zJ8C3W2abN0lI=
+Return-Path:
+	<82e4b911.BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncG@bnc3.epriscon.com>
+Message-Id: <82e4b911.BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncG@mailjet.com>
+SenderEmail: judy.a@americandentaltraining.com
+SenderName: Judy
+From: Judy <judy.a@americandentaltraining.com>
+To: arpit.m@nexuses.in
+Subject: [TEST] CE Compliance is pending?
+Date: Mon, 3 Apr 2023 06:49:42 +0000
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe:
+	<mailto:unsub-82e4b911.0vyi2.vps66y4zrzus@bnc3.mailjet.com>,
+	<https://go.epriscon.com/unsub2?m=BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N68AAb1hs&b=82e4b911&e=b19f7c37&x=AtiSTa8wsb6PSEAHN0W2wvfqbhr13v_ZnY8cfIpfYTw>
+Feedback-Id: 42.2077807.1824283:MJ
+X-CSA-Complaints: csa-complaints@eco.de
+X-MJ-Mid:
+	BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N68AAb1hs
+X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
+	abuse@mailjet.com with a copy of the message
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-+QmZ4wrCu5J7v4eStAJT"
+
+--=-+QmZ4wrCu5J7v4eStAJT
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[https://toothce.com/dental-ce-pricing-2/]
+AGD Approved 8 CE Credits
+Our dental CE courses offer variety and flexibility, so you can learn at yo=
+ur convenience. All courses are available online on your desktop, tablet, o=
+r phone, you=E2=80=99ll have access for six months. Learn at your own pace =
+and on your own schedule!
+[https://toothce.com/dental-ce-pricing-2/]
+
+
+
+<<Get CE Compliant>> [https://toothce.com/dental-ce-pricing-2/]
+
+This content and details are not relevant to me. https://go.epriscon.com/un=
+sub2?hl=3Den&m=3DBAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUy=
+o9Tbqy46u2i6N68AAb1hs&b=3D82e4b911&e=3Db19f7c37&x=3DAtiSTa8wsb6PSEAHN0W2wvf=
+qbhr13v_ZnY8cfIpfYTw
+[https://go.epriscon.com/tplimg/0vyi2/b/lql7z/gjk1q.png]=
+
+--=-+QmZ4wrCu5J7v4eStAJT
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><title>CE Compliance is pending?</title><!--[if !mso]><!--><meta =
+http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><meta =
+http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><style t=
+ype=3D"text/css">#outlook a { padding:0; }
+          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-=
+size-adjust:100%; }
+          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-tab=
+le-rspace:0pt; }
+          img { border:0;height:auto;line-height:100%; outline:none;text-de=
+coration:none;-ms-interpolation-mode:bicubic; }
+          p { display:block;margin:13px 0; }</style><!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]--><!--[if lte mso 11]>
+        <style type=3D"text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]--><!--[if !mso]><!--><link href=3D"https://fonts.googleap=
+is.com/css?family=3DUbuntu:300,400,500,700" rel=3D"stylesheet" type=3D"text=
+/css"><link href=3D"https://fonts.googleapis.com/css?family=3DPoppins" rel=
+=3D"stylesheet" type=3D"text/css"><style type=3D"text/css">@import url(http=
+s://fonts.googleapis.com/css?family=3DUbuntu:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=3DPoppins);</style><!--=
+<![endif]--><style type=3D"text/css">@media only screen and (min-width:480p=
+x) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      }</style><style media=3D"screen and (min-width:480px)">.moz-text-html=
+ .mj-column-per-100 { width:100% !important; max-width: 100%; }</style><sty=
+le type=3D"text/css">[owa] .mj-column-per-100 { width:100% !important; max-=
+width: 100%; }</style><style type=3D"text/css">@media only screen and (max-=
+width:480px) {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+    }</style></head><body style=3D"word-spacing:normal;background-color:#F4=
+F4F4;"><div style=3D"display:none;font-size:1px;color:#ffffff;line-height:1=
+px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">All courses are=
+ available online on your desktop, tablet, or phone, you=E2=80=99ll have ac=
+cess for six months. Learn at your own pace and on y</div><div style=3D"bac=
+kground-color:#F4F4F4;"><!--[if mso | IE]><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:600px;" width=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"li=
+ne-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div=
+ style=3D"background:#ffffff;background-color:#ffffff;margin:0px auto;max-w=
+idth:600px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-col=
+or:#ffffff;width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:0px=
+;padding:0px 0px 0px 0px;padding-bottom:0px;padding-left:0px;padding-right:=
+0px;padding-top:0px;text-align:center;"><!--[if mso | IE]><table role=3D"pr=
+esentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=
+=3D"" style=3D"vertical-align:top;width:600px;" ><![endif]--><div class=3D"=
+mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-align:l=
+eft;direction:ltr;display:inline-block;vertical-align:top;width:100%;"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" s=
+tyle=3D"vertical-align:top;" width=3D"100%"><tbody><tr><td align=3D"center"=
+ style=3D"font-size:0px;padding:0px 0px 0px 0px;padding-top:0px;padding-rig=
+ht:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"w=
+idth:600px;"><a href=3D"https://go.epriscon.com/lnk/BAAAA_POxRkAAAAAAAAAALd=
+53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N68AAb1hs/1/MwMOA69Etw9lfCv6=
+pB6hWg/aHR0cHM6Ly90b290aGNlLmNvbS9kZW50YWwtY2UtcHJpY2luZy0yLw" target=3D"_b=
+lank"><img alt=3D"" height=3D"auto" src=3D"https://go.epriscon.com/tplimg/0=
+vyi2/b/lql7z/gjk1j.png" style=3D"border:none;display:block;outline:none;tex=
+t-decoration:none;height:auto;width:100%;font-size:13px;" width=3D"600"></a=
+></td></tr></tbody></table></td></tr><tr><td align=3D"left" style=3D"backgr=
+ound:#ffffff;font-size:0px;padding:6px 39px 0px 39px;padding-top:6px;paddin=
+g-right:39px;padding-bottom:0px;padding-left:39px;word-break:break-word;"><=
+div style=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:22p=
+x;line-height:1;text-align:left;color:#000000;"><p class=3D"text-build-cont=
+ent" data-testid=3D"LP7bulD6n0IJMFnvC1qvr" style=3D"margin: 10px 0; margin-=
+top: 10px; margin-bottom: 10px;"><span style=3D"color:#000000;font-family:P=
+oppins;font-size:22px;letter-spacing:5px;"><b>AGD Approved 8 CE Credits</b>=
+</span></p></div></td></tr><tr><td align=3D"left" style=3D"background:#ffff=
+ff;font-size:0px;padding:0px 41px 0px 41px;padding-top:0px;padding-right:41=
+px;padding-bottom:0px;padding-left:41px;word-break:break-word;"><div style=
+=3D"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;line-he=
+ight:1;text-align:left;color:#000000;"><p class=3D"text-build-content" styl=
+e=3D"line-height: 31px; margin: 10px 0; margin-top: 10px; margin-bottom: 10=
+px;" data-testid=3D"g_uowguTyIVCq-OccMH_k"><span style=3D"font-size:16px;">=
+Our dental CE courses offer variety and flexibility, so you can learn at yo=
+ur convenience. All courses are available online on your desktop, tablet, o=
+r phone, you=E2=80=99ll have access for six months. Learn at your own pace =
+and on your own schedule!</span></p></div></td></tr><tr><td align=3D"center=
+" style=3D"font-size:0px;padding:10px 25px;word-break:break-word;"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"w=
+idth:550px;"><a href=3D"https://go.epriscon.com/lnk/BAAAA_POxRkAAAAAAAAAALd=
+53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N68AAb1hs/2/Ev4tWyeZ4yvxzQ9N=
+xNKYZQ/aHR0cHM6Ly90b290aGNlLmNvbS9kZW50YWwtY2UtcHJpY2luZy0yLw" target=3D"_b=
+lank"><img alt=3D"" height=3D"auto" src=3D"https://go.epriscon.com/tplimg/0=
+vyi2/b/lql7z/gjk1n.png" style=3D"border:none;display:block;outline:none;tex=
+t-decoration:none;height:auto;width:100%;font-size:13px;" width=3D"550"></a=
+></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | IE=
+]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso=
+ | IE]></td></tr></table><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:60=
+0px;" width=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"line-height:0px;f=
+ont-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"backg=
+round:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;"><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"background:#ffffff;background-color:#ffffff;widt=
+h:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:0px;padding:0px 0p=
+x 0px 0px;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top=
+:0px;text-align:center;"><!--[if mso | IE]><table role=3D"presentation" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"v=
+ertical-align:top;width:600px;" ><![endif]--><div class=3D"mj-column-per-10=
+0 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction:lt=
+r;display:inline-block;vertical-align:top;width:100%;"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertical=
+-align:top;" width=3D"100%"><tbody><tr><td align=3D"center" vertical-align=
+=3D"middle" style=3D"background:#ffffff;font-size:0px;padding:23px 0px 18px=
+ 0px;padding-top:23px;padding-right:0px;padding-bottom:18px;padding-left:0p=
+x;word-break:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"border-collapse:separate;line-height:=
+100%;"><tbody><tr><td align=3D"center" bgcolor=3D"#1a47b2" role=3D"presenta=
+tion" style=3D"border:none;border-radius:0px;cursor:auto;mso-padding-alt:10=
+px 25px 10px 25px;background:#1a47b2;" valign=3D"middle"><a href=3D"https:/=
+/go.epriscon.com/lnk/BAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncGaT=
+BuUyo9Tbqy46u2i6N68AAb1hs/3/9qbKOAhMOetL0Dpg20vX4A/aHR0cHM6Ly90b290aGNlLmNv=
+bS9kZW50YWwtY2UtcHJpY2luZy0yLw" style=3D"display:inline-block;background:#1=
+a47b2;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-s=
+ize:26px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;=
+text-transform:none;padding:10px 25px 10px 25px;mso-padding-alt:0px;border-=
+radius:0px;" target=3D"_blank"><span style=3D"background-color:#1a47b2;colo=
+r:#ffffff;font-family:Arial;font-size:26px;letter-spacing:1px;"><b>Get CE C=
+ompliant</b></span></a></td></tr></tbody></table></td></tr><tr><td align=3D=
+"left" style=3D"background:#ffffff;font-size:0px;padding:0px 20px 0px 20px;=
+padding-top:0px;padding-right:20px;padding-bottom:0px;padding-left:20px;wor=
+d-break:break-word;"><div style=3D"font-family:Ubuntu, Helvetica, Arial, sa=
+ns-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><p cl=
+ass=3D"text-build-content" style=3D"text-align: center; margin: 10px 0; mar=
+gin-top: 10px; margin-bottom: 10px;" data-testid=3D"hLxkUUOXZ9mRhywbvtYVF">=
+<a class=3D"link-build-content" style=3D"color:inherit;; text-decoration: n=
+one;" target=3D"_blank" href=3D"https://go.epriscon.com/unsub2?hl=3Den&amp;=
+m=3DBAAAA_POxRkAAAAAAAAAALd53V0AAYCsdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N=
+68AAb1hs&amp;b=3D82e4b911&amp;e=3Db19f7c37&amp;x=3DAtiSTa8wsb6PSEAHN0W2wvfq=
+bhr13v_ZnY8cfIpfYTw"><span style=3D"color:#55575d;font-family:Arial;font-si=
+ze:13px;line-height:22px;">This content and details are <u>not relevant</u>=
+ to me.</span></a></p></div></td></tr><tr><td align=3D"center" style=3D"fon=
+t-size:0px;padding:0px 0px 0px 0px;padding-top:0px;padding-right:0px;paddin=
+g-bottom:0px;padding-left:0px;word-break:break-word;"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-co=
+llapse:collapse;border-spacing:0px;"><tbody><tr><td style=3D"width:600px;">=
+<img alt=3D"" height=3D"auto" src=3D"https://go.epriscon.com/tplimg/0vyi2/b=
+/lql7z/gjk1q.png" style=3D"border:none;display:block;outline:none;text-deco=
+ration:none;height:auto;width:100%;font-size:13px;" width=3D"600"></td></tr=
+></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]></td></t=
+r></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></t=
+d></tr></table><table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;" width=
+=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:600px;"><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:l=
+tr;font-size:0px;padding:0px 0px 20px 0px;padding-left:0px;padding-right:0p=
+x;padding-top:0px;text-align:center;"><!--[if mso | IE]><table role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D=
+"" style=3D"vertical-align:top;width:600px;" ><![endif]--><div class=3D"mj-=
+column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;text-align:left=
+;direction:ltr;display:inline-block;vertical-align:top;width:100%;"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"vertical-align:top;" width=3D"100%"><tbody></tbody></table></div><!--[=
+if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div>=
+<!--[if mso | IE]></td></tr></table><![endif]--></div>
+<br/><img src=3D"https://go.epriscon.com/oo/BAAAA_POxRkAAAAAAAAAALd53V0AAYC=
+sdF0AAAAAAB-0bwBkKncGaTBuUyo9Tbqy46u2i6N68AAb1hs/f7ba69b0/e.gif" height=3D"=
+1" width=3D"1" alt=3D"" border=3D"0" style=3D"height:1px;width:1px;border:0=
+;"/>
+</body></html>=
+
+--=-+QmZ4wrCu5J7v4eStAJT--

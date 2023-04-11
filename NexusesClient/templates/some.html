@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Facebook Scraper</title>
+  </head>
+  <body>
+    <h1>Facebook Scraper</h1>
+    <form method="POST" action="{{ url_for('scrape') }}">
+      <label for="profile_url">Enter Facebook profile URL:</label>
+      <input type="text" id="profile_url" name="profile_url">
+      <br>
+      <input type="submit" value="Scrape">
+    </form>
+  </body>
+</html>
